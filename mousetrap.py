@@ -68,6 +68,15 @@ def main():
     catsGroup = pygame.sprite.Group()
 
     def mouse(x,y):
+        if x > 1000:
+            x = 1000
+        elif x < 0:
+            x = 0
+        
+        if y > 1000:
+            y = 1000
+        elif y < 0:
+            y = 0
         mainSurface.blit(mouseImg,(x,y))
     def cheese(cheesex,cheesey):
         mainSurface.blit(cheeseImg,(cheesex,cheesey))
